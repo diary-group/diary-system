@@ -1,16 +1,15 @@
 # =========================================
 # DIARY SYSTEM - GROUP ACTIVITY (GITHUB)
 #
-# STUDENT A - X MODE: Initialize file (PUSH)
-# STUDENT B - W MODE: Write initial data (CLONE/PUSH)
-# STUDENT C - A MODE: Append entries (PULL/PUSH)
-# STUDENT D - R MODE: Read + count entries (PULL/PUSH)
+# Student A: Initialization (X mode)
+# Student B: TUPAG - Write (W mode)
+# Student C: MIJE - Append (A mode)
+# Student D: VELEZ - Read (R mode)
 # =========================================
 
 
 # ================================
-# STUDENT A - INITIALIZE FILE (X MODE)
-# Git Action: PUSH
+# STUDENT A - INITIALIZATION (X MODE)
 # Task: Create shared project file
 # ================================
 try:
@@ -27,47 +26,44 @@ print("Student A: File initialized.\n")
 
 
 # ================================
-# STUDENT B - WRITE MODE (W)
-# Git Action: CLONE + PUSH
+# STUDENT B - TUPAG (W MODE)
 # Task: Write initial data
 # ================================
-entry_b = input("Student B - Enter initial log entry: ")
+entry_b = input("Student B (TUPAG) - Enter initial log entry: ")
 
 f = open("diary.txt", "a")
 f.write("2. " + entry_b + "\n")
 f.close()
 
-print("Student B: Initial data written.\n")
+print("Student B (TUPAG): Initial data written.\n")
 
 
 # ================================
-# STUDENT C - APPEND MODE (A)
-# Git Action: PULL + PUSH
+# STUDENT C - MIJE (A MODE)
 # Task: Append multiple entries
 # ================================
-entry_c = input("Student C - Add log entry: ")
+entry_c = input("Student C (MIJE) - Add log entry: ")
 
 f = open("diary.txt", "a")
 f.write("3. " + entry_c + "\n")
 f.close()
 
-print("Student C: Entry appended.\n")
+print("Student C (MIJE): Entry appended.\n")
 
 
 # ================================
-# STUDENT D - READ MODE (R)
-# Git Action: PULL + PUSH
+# STUDENT D - VELEZ (R MODE)
 # Task: Read file and count entries
 # ================================
 f = open("diary.txt", "r")
 lines = f.readlines()
 f.close()
 
-print("=== STUDENT D OUTPUT ===")
+print("=== STUDENT D (VELEZ) OUTPUT ===")
 print("Diary Contents:\n")
 
 for i, line in enumerate(lines, start=1):
     print(i, line.strip())
 
 print("\nTotal entries:", len(lines))
-print("Student D: Read complete.\n")
+print("Student D (VELEZ): Read complete.\n")
